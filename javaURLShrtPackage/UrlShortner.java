@@ -1,11 +1,12 @@
 package javaURLShrtPackage;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 
-public class UrlShotner {
+class UrlShotner {
     @Deprecated
     public String shortenUrl(String longURL) {
         try {
@@ -34,6 +35,4 @@ public class UrlShotner {
             return "Error: " + e.getMessage();
         }
     }
-
-   
 }

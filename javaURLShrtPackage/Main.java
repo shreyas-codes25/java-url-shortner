@@ -1,13 +1,13 @@
 package javaURLShrtPackage;
 
-public class Main {
-    @Deprecated
-    public static void main(String[] args) {
-        UrlShotner urlShortener = new UrlShotner();
-        String longURL = "https://github.com/shreyas-codes25/all-data-structures-java";
-        String shortenedURL = urlShortener.shortenUrl(longURL);
+import javax.swing.SwingUtilities;
 
-        System.out.println("Shortened URL: " + shortenedURL);
+public class Main {
+  
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            UrlShortener gui = new UrlShortener();
+            gui.setVisible(true);
+        });
     }
-    
 }
