@@ -5,12 +5,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class UrlShortener extends JFrame {
+public class UrlShortenerGUI extends JFrame {
     private JTextField longURLField;
     private JButton shortenButton;
     private JTextArea resultArea;
 
-    public UrlShortener() {
+    public UrlShortenerGUI() {
         setTitle("URL Shortener");
         setSize(550, 300);
         setResizable(false);
