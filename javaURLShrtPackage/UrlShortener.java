@@ -17,6 +17,7 @@ public class UrlShortener extends JFrame {
         setLayout(new BorderLayout());
 
         longURLField = new JTextField();
+        longURLField.setSize(10,50);
         shortenButton = new JButton("Shorten URL");
         resultArea = new JTextArea();
 
