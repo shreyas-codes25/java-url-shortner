@@ -12,12 +12,14 @@ public class UrlShortener extends JFrame {
 
     public UrlShortener() {
         setTitle("URL Shortener");
-        setSize(400, 200);
+        setSize(550, 300);
+        setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout());
 
         longURLField = new JTextField();
         longURLField.setSize(10,50);
+        longURLField.setColumns(30);
         shortenButton = new JButton("Shorten URL");
         resultArea = new JTextArea();
 
