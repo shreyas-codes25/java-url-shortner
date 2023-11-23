@@ -5,22 +5,11 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
-import java.util.HashMap;
-import java.util.Map;
 
 class UrlShortner {
-
-    // HashMap to cache already shortened URLs
-    private Map<String, String> urlCache = new HashMap<>();
-
     @Deprecated
     public String shortenUrl(String longURL) {
         try {
-            // Check if the URL is already in the cache
-            if (urlCache.containsKey(longURL)) {
-                return urlCache.get(longURL);
-            }
-
             longURL = URLEncoder.encode(longURL, "UTF-8"); // URL-encode the long URL
             URL url = new URL("http://tinyurl.com/api-create.php?url=" + longURL);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
@@ -37,11 +26,7 @@ class UrlShortner {
                 }
                 in.close();
 
-                // Cache the shortened URL
-                String shortURL = response.toString();
-                urlCache.put(longURL, shortURL);
-
-                return shortURL;
+                return response.toString();
             } else {
                 return "Error: " + responseCode;
             }

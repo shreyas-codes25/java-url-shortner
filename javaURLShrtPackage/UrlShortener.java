@@ -39,7 +39,7 @@ public class UrlShortener extends JFrame {
     @Deprecated
     private void shortenURL() {
         String longURL = longURLField.getText();
-        UrlShotner urlShortener = new UrlShotner();
+        UrlShortner urlShortener = new UrlShortner();
         String shortenedURL = urlShortener.shortenUrl(longURL);
 
         resultArea.setText("Shortened URL: " + shortenedURL);
